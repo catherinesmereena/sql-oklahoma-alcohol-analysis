@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useEffect } from "react"
+import { useEffect, Suspense } from "react"
 import { Button } from "@/components/ui/button"
 import {
   Download,
@@ -522,9 +522,10 @@ export default function Home() {
                 <CardDescription className="text-gray-300 mb-4">
                   A comprehensive portfolio of Excel-driven business analytics projects addressing real-world challenges
                   across multiple domains. Projects include inventory optimization reducing stockouts by 23%,
-                  profitability forecasting with 92% accuracy, operational planning tools that improved resource
-                  allocation by 15%, and strategic decision-making frameworks that quantified business outcomes through
-                  sophisticated financial modeling and what-if analysis.
+                  profitability Projects include inventory optimization reducing stockouts by 23%, profitability
+                  forecasting with 92% accuracy, operational planning tools that improved resource allocation by 15%,
+                  and strategic decision-making frameworks that quantified business outcomes through sophisticated
+                  financial modeling and what-if analysis.
                 </CardDescription>
                 <div className="flex flex-wrap gap-2">
                   {["Excel", "Data Analysis", "Business Intelligence", "Forecasting"].map((tag, index) => (
@@ -741,7 +742,9 @@ export default function Home() {
 
             <div>
               <h3 className="text-xl font-semibold mb-4 text-white">Send a Message</h3>
-              <ContactForm />
+              <Suspense fallback={<div className="p-4 text-center">Loading contact form...</div>}>
+                <ContactForm />
+              </Suspense>
             </div>
           </div>
         </div>
