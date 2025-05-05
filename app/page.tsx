@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useEffect, Suspense } from "react"
+import { useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import {
   Download,
@@ -22,7 +22,6 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ThemeToggle } from "./components/theme-toggle"
 import { ColorThemeToggle } from "./components/color-theme-toggle"
-import ContactForm from "./components/contact-form"
 import { BarChart, Code, Database } from "lucide-react"
 import BlinkingNav from "./components/blinking-nav"
 import { useColorTheme } from "./contexts/color-theme-context"
@@ -34,6 +33,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import RoleAnimation from "./components/role-animation"
 
 export default function Home() {
   const { setColorTheme } = useColorTheme()
@@ -60,19 +60,35 @@ export default function Home() {
       {/* Hero Section */}
       <section id="about" className="container mx-auto py-16 px-4 md:px-0">
         <div className="flex flex-col md:flex-row gap-12 items-center">
-          <div className="w-full md:w-1/2">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Hello, I'm Catherine Smereena Dommaty</h2>
-            <p className="text-lg text-gray-300 mb-8">
-              <span className="font-semibold">Analytics Graduate Student</span> with expertise in data analysis,
-              business intelligence, and statistical modeling. Seeking roles as an
-              <span className="font-medium">
-                {" "}
-                Operations Analyst, Business Analyst, Business Intelligence Analyst, Statistical Analyst, Data Analyst,
-              </span>{" "}
-              or <span className="font-medium">Product Analyst</span>. Proficient in Python, SQL, and data visualization
-              tools.
-            </p>
-            <div className="flex flex-wrap gap-3">
+          <div className="w-full md:w-1/2 flex flex-col items-center text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <span className="block">Hello,</span>
+              <span className="block">I am Catherine Smereena Dommaty</span>
+            </h2>
+
+            <RoleAnimation />
+
+            <div className="bg-black/60 p-6 rounded-xl border border-[color:var(--theme-accent)]/20 mb-8 mt-8">
+              <h3 className="text-2xl font-semibold text-white mb-4">About Me</h3>
+              <p className="text-lg text-gray-300 mb-4">
+                Hi, I'm Catherine Smereena Dommaty — a data analytics graduate passionate about transforming raw data
+                into actionable insights. With hands-on experience in predictive modeling, SQL, data visualization, and
+                business intelligence tools like Power BI, Tableau, and Python, I thrive at the intersection of
+                technology and strategy.
+              </p>
+              <p className="text-lg text-gray-300 mb-4">
+                My portfolio reflects my journey through real-world projects, from forecasting housing prices and
+                analyzing NFL play types to optimizing marketing spend and tracking patient care metrics. I bring a
+                detail-oriented mindset, strong storytelling skills, and a solid foundation in statistics to every
+                challenge I take on.
+              </p>
+              <p className="text-lg text-gray-300">
+                I'm currently seeking opportunities where I can contribute to data-driven decision-making, streamline
+                business operations, and build scalable solutions that make an impact.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap gap-3 justify-center">
               <Button
                 className="bg-[color:var(--theme-primary)] hover:bg-[color:var(--theme-primary)]/80 text-black"
                 asChild
@@ -522,10 +538,9 @@ export default function Home() {
                 <CardDescription className="text-gray-300 mb-4">
                   A comprehensive portfolio of Excel-driven business analytics projects addressing real-world challenges
                   across multiple domains. Projects include inventory optimization reducing stockouts by 23%,
-                  profitability Projects include inventory optimization reducing stockouts by 23%, profitability
-                  forecasting with 92% accuracy, operational planning tools that improved resource allocation by 15%,
-                  and strategic decision-making frameworks that quantified business outcomes through sophisticated
-                  financial modeling and what-if analysis.
+                  profitability forecasting with 92% accuracy, operational planning tools that improved resource
+                  allocation by 15%, and strategic decision-making frameworks that quantified business outcomes through
+                  sophisticated financial modeling and what-if analysis.
                 </CardDescription>
                 <div className="flex flex-wrap gap-2">
                   {["Excel", "Data Analysis", "Business Intelligence", "Forecasting"].map((tag, index) => (
@@ -693,58 +708,46 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Contact Section - Simplified */}
       <section id="contact" className="container mx-auto py-16 px-4 md:px-0">
-        <h2 className="text-3xl font-bold text-center text-white mb-4">Contact Me</h2>
-        <h3 className="text-xl font-medium text-center text-gray-300 mb-12">GET IN TOUCH</h3>
-
         <div className="max-w-3xl mx-auto bg-black/70 p-8 rounded-3xl shadow-sm">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-semibold mb-4 text-white">Contact Information</h3>
-              <p className="text-gray-300 mb-6">
-                Feel free to reach out for collaborations, opportunities, or just to say hello!
-              </p>
+          <div className="flex flex-col items-center">
+            <h3 className="text-xl font-semibold mb-6 text-white">Contact Information</h3>
+            <p className="text-gray-300 mb-8 text-center max-w-lg">
+              Feel free to reach out for collaborations, opportunities, or just to say hello!
+            </p>
 
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <Phone className="h-5 w-5 text-[color:var(--theme-primary)] mr-3" />
-                  <p className="text-gray-300">+1 (214)-516 5983</p>
-                </div>
-                <div className="flex items-center">
-                  <Mail className="h-5 w-5 text-[color:var(--theme-secondary)] mr-3" />
-                  <p className="text-gray-300">catherinesmereena.dommaty@gmail.com</p>
-                </div>
-                <div className="flex items-center">
-                  <Linkedin className="h-5 w-5 text-[color:var(--theme-accent)] mr-3" />
-                  <a
-                    href="https://www.linkedin.com/in/catherine-smereena-dommaty-59036828b/"
-                    className="text-gray-300 hover:text-[color:var(--theme-accent)]"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    LinkedIn Profile
-                  </a>
-                </div>
-                <div className="flex items-center">
-                  <Github className="h-5 w-5 text-[color:var(--theme-primary)] mr-3" />
-                  <a
-                    href="https://github.com/catherinesmereena"
-                    className="text-gray-300 hover:text-[color:var(--theme-primary)]"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    GitHub Profile
-                  </a>
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-xl">
+              <div className="flex items-center justify-center md:justify-end">
+                <Phone className="h-5 w-5 text-[color:var(--theme-primary)] mr-3" />
+                <p className="text-gray-300">+1 (214)-516 5983</p>
               </div>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold mb-4 text-white">Send a Message</h3>
-              <Suspense fallback={<div className="p-4 text-center">Loading contact form...</div>}>
-                <ContactForm />
-              </Suspense>
+              <div className="flex items-center justify-center md:justify-start">
+                <Mail className="h-5 w-5 text-[color:var(--theme-secondary)] mr-3" />
+                <p className="text-gray-300">catherinesmereena.dommaty@gmail.com</p>
+              </div>
+              <div className="flex items-center justify-center md:justify-end">
+                <Linkedin className="h-5 w-5 text-[color:var(--theme-accent)] mr-3" />
+                <a
+                  href="https://www.linkedin.com/in/catherine-smereena-dommaty-59036828b/"
+                  className="text-gray-300 hover:text-[color:var(--theme-accent)]"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn Profile
+                </a>
+              </div>
+              <div className="flex items-center justify-center md:justify-start">
+                <Github className="h-5 w-5 text-[color:var(--theme-primary)] mr-3" />
+                <a
+                  href="https://github.com/catherinesmereena"
+                  className="text-gray-300 hover:text-[color:var(--theme-primary)]"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub Profile
+                </a>
+              </div>
             </div>
           </div>
         </div>
