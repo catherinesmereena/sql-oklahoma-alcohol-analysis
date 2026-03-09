@@ -149,41 +149,83 @@ export default function Home() {
       <section id="experience" className="container mx-auto py-16 px-4 md:px-0 bg-black/70 rounded-3xl shadow-sm mb-16">
         <h2 className="text-3xl font-bold text-center text-white mb-12">Work Experience</h2>
         
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto space-y-8">
+          {/* Jabil Inc - Current */}
           <div className="bg-black/90 p-8 rounded-xl shadow-sm border border-[color:var(--theme-primary)]/20">
             <div className="flex justify-between items-start mb-4">
               <div>
-                <h3 className="text-2xl font-semibold text-white">AI Data Prompt Engineer Intern</h3>
-                <p className="text-xl text-[color:var(--theme-primary)] font-medium">Ipser Lab</p>
+                <h3 className="text-2xl font-semibold text-white">Data Engineer</h3>
+                <p className="text-xl text-[color:var(--theme-primary)] font-medium">Jabil Inc</p>
               </div>
               <div className="text-right">
-                <p className="text-gray-300 font-medium">May 2025 – Present</p>
+                <p className="text-gray-300 font-medium">Aug 2025 – Present</p>
+                <span className="inline-block px-2 py-1 bg-[color:var(--theme-primary)]/20 text-[color:var(--theme-primary)] text-xs rounded mt-1">Current</span>
               </div>
             </div>
             
             <ul className="space-y-3 text-gray-300">
               <li className="flex items-start">
                 <div className="w-2 h-2 rounded-full bg-[color:var(--theme-accent)] mr-3 mt-2 flex-shrink-0"></div>
+                <span>Created dynamic and insightful dashboards to visualize Member performance, enrollment trends, and retention metrics, ensuring user-friendly, scalable, and optimized tools for real-time decision-making by faculty and administrators.</span>
+              </li>
+              <li className="flex items-start">
+                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-accent)] mr-3 mt-2 flex-shrink-0"></div>
+                <span>Developed Power BI dashboards to support leadership decision-making across operational and performance metrics.</span>
+              </li>
+              <li className="flex items-start">
+                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-accent)] mr-3 mt-2 flex-shrink-0"></div>
+                <span>Prepared, validated, and transformed structured datasets using SQL to ensure accuracy and consistency for reporting and analysis.</span>
+              </li>
+              <li className="flex items-start">
+                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-accent)] mr-3 mt-2 flex-shrink-0"></div>
+                <span>Automated recurring reports and data updates, reducing manual effort and improving data accessibility for internal teams.</span>
+              </li>
+              <li className="flex items-start">
+                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-accent)] mr-3 mt-2 flex-shrink-0"></div>
+                <span>Supported cross-functional stakeholders by translating operational data into clear, actionable insights.</span>
+              </li>
+              <li className="flex items-start">
+                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-accent)] mr-3 mt-2 flex-shrink-0"></div>
+                <span>Ensured data integrity and documentation standards across reporting workflows.</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Ipser Lab */}
+          <div className="bg-black/90 p-8 rounded-xl shadow-sm border border-[color:var(--theme-secondary)]/20">
+            <div className="flex justify-between items-start mb-4">
+              <div>
+                <h3 className="text-2xl font-semibold text-white">AI Data Prompt Engineer Intern</h3>
+                <p className="text-xl text-[color:var(--theme-secondary)] font-medium">Ipser Lab</p>
+              </div>
+              <div className="text-right">
+                <p className="text-gray-300 font-medium">May 2024</p>
+              </div>
+            </div>
+            
+            <ul className="space-y-3 text-gray-300">
+              <li className="flex items-start">
+                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-secondary)] mr-3 mt-2 flex-shrink-0"></div>
                 <span>Contributed to the development of AI-driven travel agents by designing prompt flows that adapt to user emotion, tone, and intent using LangChain and LangGraph.</span>
               </li>
               <li className="flex items-start">
-                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-accent)] mr-3 mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-secondary)] mr-3 mt-2 flex-shrink-0"></div>
                 <span>Designed and tested modular agents with memory-aware behaviors, enabling real-time, personalized responses through structured GenAI workflows.</span>
               </li>
               <li className="flex items-start">
-                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-accent)] mr-3 mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-secondary)] mr-3 mt-2 flex-shrink-0"></div>
                 <span>Built Python-based unit tests to validate agent performance across diverse user contexts; optimized routing logic for scalable agent execution.</span>
               </li>
               <li className="flex items-start">
-                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-accent)] mr-3 mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-secondary)] mr-3 mt-2 flex-shrink-0"></div>
                 <span>Collaborated on emotional tone detection and prompt tuning using NLP lexicons, enhancing generative response quality and trust alignment.</span>
               </li>
               <li className="flex items-start">
-                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-accent)] mr-3 mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-secondary)] mr-3 mt-2 flex-shrink-0"></div>
                 <span>Supported multi-agent orchestration and asynchronous task delegation to improve coordination and output consistency across agent chains.</span>
               </li>
               <li className="flex items-start">
-                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-accent)] mr-3 mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-secondary)] mr-3 mt-2 flex-shrink-0"></div>
                 <span>Engineered modular, reusable Generative AI agents capable of adapting to real-time emotional tone, using multimodal NLP prompts, intent classification, and structured memory components.</span>
               </li>
             </ul>
