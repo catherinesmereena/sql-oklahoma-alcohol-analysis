@@ -4,25 +4,13 @@ import type React from "react"
 
 import { useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import {
-  Download,
-  Github,
-  Linkedin,
-  Mail,
-  Phone,
-  FileText,
-  BarChart2,
-  DollarSign,
-  LineChart,
-  Package,
-  TrendingUp,
-} from "lucide-react"
+import { Download, Github, Linkedin, Mail, Phone, FileText, BarChart2, DollarSign, LineChart, Package, TrendingUp } from 'lucide-react'
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ThemeToggle } from "./components/theme-toggle"
 import { ColorThemeToggle } from "./components/color-theme-toggle"
-import { BarChart, Code, Database } from "lucide-react"
+import { BarChart, Code, Database, Brain, Zap } from 'lucide-react'
 import BlinkingNav from "./components/blinking-nav"
 import { useColorTheme } from "./contexts/color-theme-context"
 import {
@@ -71,20 +59,16 @@ export default function Home() {
             <div className="bg-black/60 p-6 rounded-xl border border-[color:var(--theme-accent)]/20 mb-8 mt-8">
               <h3 className="text-2xl font-semibold text-white mb-4">About Me</h3>
               <p className="text-lg text-gray-300 mb-4">
-                Hi, I'm Catherine Smereena Dommaty — a data analytics graduate passionate about transforming raw data
-                into actionable insights. With hands-on experience in predictive modeling, SQL, data visualization, and
-                business intelligence tools like Power BI, Tableau, and Python, I thrive at the intersection of
-                technology and strategy.
+                I'm Catherine Smereena Dommaty, a data scientist and analyst with a passion for turning complex datasets into clear, actionable insights. My work blends technical skill with curiosity — I enjoy digging into messy data, finding patterns, and building solutions that help teams make better decisions.
               </p>
               <p className="text-lg text-gray-300 mb-4">
-                My portfolio reflects my journey through real-world projects, from forecasting housing prices and
-                analyzing NFL play types to optimizing marketing spend and tracking patient care metrics. I bring a
-                detail-oriented mindset, strong storytelling skills, and a solid foundation in statistics to every
-                challenge I take on.
+                I have experience across machine learning, automation, and analytics, with projects spanning predictive modeling, data visualization, and AI-driven decision systems. I'm fluent in Python, SQL, and tools like Power BI and Tableau, and I've worked on everything from healthcare analytics to sales performance optimization.
+              </p>
+              <p className="text-lg text-gray-300 mb-4">
+                Beyond the code, I value collaboration and clarity. I've worked closely with cross-functional teams translating technical results into strategies that non-technical stakeholders can act on. I'm also fascinated by the future of AI in biotech, healthcare, and autonomous systems, and I'm always exploring ways to apply emerging technologies to solve real-world problems.
               </p>
               <p className="text-lg text-gray-300">
-                I'm currently seeking opportunities where I can contribute to data-driven decision-making, streamline
-                business operations, and build scalable solutions that make an impact.
+                When I'm not analyzing data, you'll probably find me learning something new, experimenting with creative projects, or diving into science-fiction worlds that spark my imagination.
               </p>
             </div>
 
@@ -152,7 +136,7 @@ export default function Home() {
           <div className="w-full md:w-1/2 flex justify-center">
             <div className="w-64 h-64 rounded-full bg-gradient-to-br from-[color:var(--theme-primary)] via-[color:var(--theme-secondary)] to-[color:var(--theme-accent)] dark:from-[color:var(--theme-primary)]/30 dark:via-[color:var(--theme-secondary)]/30 dark:to-[color:var(--theme-accent)]/30 flex items-center justify-center shadow-lg p-2">
               <img
-                src="/images/profile-photo.png"
+                src="/images/catherine-profile.jpg"
                 alt="Catherine Smereena Dommaty"
                 className="rounded-full w-60 h-60 object-cover"
               />
@@ -161,18 +145,106 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Skills Section - Simplified */}
+      {/* Work Experience Section */}
+      <section id="experience" className="container mx-auto py-16 px-4 md:px-0 bg-black/70 rounded-3xl shadow-sm mb-16">
+        <h2 className="text-3xl font-bold text-center text-white mb-12">Work Experience</h2>
+        
+        <div className="max-w-4xl mx-auto space-y-8">
+          {/* Jabil Inc - Current */}
+          <div className="bg-black/90 p-8 rounded-xl shadow-sm border border-[color:var(--theme-primary)]/20">
+            <div className="flex justify-between items-start mb-4">
+              <div>
+                <h3 className="text-2xl font-semibold text-white">Data Engineer</h3>
+                <p className="text-xl text-[color:var(--theme-primary)] font-medium">Jabil Inc</p>
+              </div>
+              <div className="text-right">
+                <p className="text-gray-300 font-medium">Aug 2025 – Present</p>
+                <span className="inline-block px-2 py-1 bg-[color:var(--theme-primary)]/20 text-[color:var(--theme-primary)] text-xs rounded mt-1">Current</span>
+              </div>
+            </div>
+            
+            <ul className="space-y-3 text-gray-300">
+              <li className="flex items-start">
+                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-accent)] mr-3 mt-2 flex-shrink-0"></div>
+                <span>Created dynamic and insightful dashboards to visualize Member performance, enrollment trends, and retention metrics, ensuring user-friendly, scalable, and optimized tools for real-time decision-making by faculty and administrators.</span>
+              </li>
+              <li className="flex items-start">
+                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-accent)] mr-3 mt-2 flex-shrink-0"></div>
+                <span>Developed Power BI dashboards to support leadership decision-making across operational and performance metrics.</span>
+              </li>
+              <li className="flex items-start">
+                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-accent)] mr-3 mt-2 flex-shrink-0"></div>
+                <span>Prepared, validated, and transformed structured datasets using SQL to ensure accuracy and consistency for reporting and analysis.</span>
+              </li>
+              <li className="flex items-start">
+                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-accent)] mr-3 mt-2 flex-shrink-0"></div>
+                <span>Automated recurring reports and data updates, reducing manual effort and improving data accessibility for internal teams.</span>
+              </li>
+              <li className="flex items-start">
+                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-accent)] mr-3 mt-2 flex-shrink-0"></div>
+                <span>Supported cross-functional stakeholders by translating operational data into clear, actionable insights.</span>
+              </li>
+              <li className="flex items-start">
+                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-accent)] mr-3 mt-2 flex-shrink-0"></div>
+                <span>Ensured data integrity and documentation standards across reporting workflows.</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Ipser Lab */}
+          <div className="bg-black/90 p-8 rounded-xl shadow-sm border border-[color:var(--theme-secondary)]/20">
+            <div className="flex justify-between items-start mb-4">
+              <div>
+                <h3 className="text-2xl font-semibold text-white">AI Data Prompt Engineer Intern</h3>
+                <p className="text-xl text-[color:var(--theme-secondary)] font-medium">Ipser Lab</p>
+              </div>
+              <div className="text-right">
+                <p className="text-gray-300 font-medium">May 2024</p>
+              </div>
+            </div>
+            
+            <ul className="space-y-3 text-gray-300">
+              <li className="flex items-start">
+                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-secondary)] mr-3 mt-2 flex-shrink-0"></div>
+                <span>Contributed to the development of AI-driven travel agents by designing prompt flows that adapt to user emotion, tone, and intent using LangChain and LangGraph.</span>
+              </li>
+              <li className="flex items-start">
+                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-secondary)] mr-3 mt-2 flex-shrink-0"></div>
+                <span>Designed and tested modular agents with memory-aware behaviors, enabling real-time, personalized responses through structured GenAI workflows.</span>
+              </li>
+              <li className="flex items-start">
+                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-secondary)] mr-3 mt-2 flex-shrink-0"></div>
+                <span>Built Python-based unit tests to validate agent performance across diverse user contexts; optimized routing logic for scalable agent execution.</span>
+              </li>
+              <li className="flex items-start">
+                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-secondary)] mr-3 mt-2 flex-shrink-0"></div>
+                <span>Collaborated on emotional tone detection and prompt tuning using NLP lexicons, enhancing generative response quality and trust alignment.</span>
+              </li>
+              <li className="flex items-start">
+                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-secondary)] mr-3 mt-2 flex-shrink-0"></div>
+                <span>Supported multi-agent orchestration and asynchronous task delegation to improve coordination and output consistency across agent chains.</span>
+              </li>
+              <li className="flex items-start">
+                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-secondary)] mr-3 mt-2 flex-shrink-0"></div>
+                <span>Engineered modular, reusable Generative AI agents capable of adapting to real-time emotional tone, using multimodal NLP prompts, intent classification, and structured memory components.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Skills Section - Enhanced */}
       <section id="skills" className="container mx-auto py-16 px-4 md:px-0 bg-black/70 rounded-3xl shadow-sm">
         <h2 className="text-3xl font-bold text-center text-white mb-12">Skills</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Programming & Tools */}
           <div className="bg-black/90 p-6 rounded-xl shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 bg-[color:var(--theme-primary)]/20 rounded-lg">
                 <Code className="h-5 w-5 text-[color:var(--theme-primary)]" />
               </div>
-              <h3 className="text-xl font-semibold text-white">Programming & Tools</h3>
+              <h3 className="text-xl font-semibold text-white">Programming</h3>
             </div>
             <ul className="space-y-2 text-gray-200">
               <li className="flex items-center">
@@ -188,47 +260,35 @@ export default function Home() {
               </li>
               <li className="flex items-center">
                 <div className="w-2 h-2 rounded-full bg-[color:var(--theme-primary)] mr-2"></div>
-                Excel (Advanced Functions, Pivot Tables)
-              </li>
-              <li className="flex items-center">
-                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-primary)] mr-2"></div>
                 Git & Version Control
-              </li>
-              <li className="flex items-center">
-                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-primary)] mr-2"></div>
-                Jupyter Notebooks
               </li>
             </ul>
           </div>
 
-          {/* Data Analysis */}
+          {/* AI & Machine Learning */}
           <div className="bg-black/90 p-6 rounded-xl shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 bg-[color:var(--theme-secondary)]/20 rounded-lg">
-                <LineChart className="h-5 w-5 text-[color:var(--theme-secondary)]" />
+                <Brain className="h-5 w-5 text-[color:var(--theme-secondary)]" />
               </div>
-              <h3 className="text-xl font-semibold text-white">Data Analysis</h3>
+              <h3 className="text-xl font-semibold text-white">AI & ML</h3>
             </div>
             <ul className="space-y-2 text-gray-200">
               <li className="flex items-center">
                 <div className="w-2 h-2 rounded-full bg-[color:var(--theme-secondary)] mr-2"></div>
-                Statistical Analysis
+                Generative AI & LLMs
               </li>
               <li className="flex items-center">
                 <div className="w-2 h-2 rounded-full bg-[color:var(--theme-secondary)] mr-2"></div>
-                Predictive Modeling
+                Prompt Engineering
               </li>
               <li className="flex items-center">
                 <div className="w-2 h-2 rounded-full bg-[color:var(--theme-secondary)] mr-2"></div>
-                A/B Testing
+                LangChain & LangGraph
               </li>
               <li className="flex items-center">
                 <div className="w-2 h-2 rounded-full bg-[color:var(--theme-secondary)] mr-2"></div>
-                Data Cleaning & Preprocessing
-              </li>
-              <li className="flex items-center">
-                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-secondary)] mr-2"></div>
-                Exploratory Data Analysis (EDA)
+                PyTorch & TensorFlow
               </li>
               <li className="flex items-center">
                 <div className="w-2 h-2 rounded-full bg-[color:var(--theme-secondary)] mr-2"></div>
@@ -237,74 +297,86 @@ export default function Home() {
             </ul>
           </div>
 
-          {/* Data Visualization */}
+          {/* Data Infrastructure */}
           <div className="bg-black/90 p-6 rounded-xl shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 bg-[color:var(--theme-accent)]/20 rounded-lg">
-                <BarChart className="h-5 w-5 text-[color:var(--theme-accent)]" />
+                <Database className="h-5 w-5 text-[color:var(--theme-accent)]" />
               </div>
-              <h3 className="text-xl font-semibold text-white">Data Visualization</h3>
+              <h3 className="text-xl font-semibold text-white">Data Infrastructure</h3>
             </div>
             <ul className="space-y-2 text-gray-200">
               <li className="flex items-center">
                 <div className="w-2 h-2 rounded-full bg-[color:var(--theme-accent)] mr-2"></div>
-                Tableau
+                Snowflake & Databricks
               </li>
               <li className="flex items-center">
                 <div className="w-2 h-2 rounded-full bg-[color:var(--theme-accent)] mr-2"></div>
-                Power BI
+                dbt & Airflow
               </li>
               <li className="flex items-center">
                 <div className="w-2 h-2 rounded-full bg-[color:var(--theme-accent)] mr-2"></div>
+                Hadoop & Spark
+              </li>
+              <li className="flex items-center">
+                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-accent)] mr-2"></div>
+                ETL Pipelines
+              </li>
+            </ul>
+          </div>
+
+          {/* Data Visualization */}
+          <div className="bg-black/90 p-6 rounded-xl shadow-sm">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 bg-purple-900/30 rounded-lg">
+                <BarChart className="h-5 w-5 text-purple-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white">Visualization</h3>
+            </div>
+            <ul className="space-y-2 text-gray-200">
+              <li className="flex items-center">
+                <div className="w-2 h-2 rounded-full bg-purple-500 mr-2"></div>
+                Tableau & Power BI
+              </li>
+              <li className="flex items-center">
+                <div className="w-2 h-2 rounded-full bg-purple-500 mr-2"></div>
                 Matplotlib & Seaborn
               </li>
               <li className="flex items-center">
-                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-accent)] mr-2"></div>
-                ggplot2
-              </li>
-              <li className="flex items-center">
-                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-accent)] mr-2"></div>
+                <div className="w-2 h-2 rounded-full bg-purple-500 mr-2"></div>
                 Dashboard Design
               </li>
               <li className="flex items-center">
-                <div className="w-2 h-2 rounded-full bg-[color:var(--theme-accent)] mr-2"></div>
+                <div className="w-2 h-2 rounded-full bg-purple-500 mr-2"></div>
                 Data Storytelling
               </li>
             </ul>
           </div>
 
-          {/* Business Intelligence */}
+          {/* Data Quality & Tools */}
           <div className="bg-black/90 p-6 rounded-xl shadow-sm">
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 bg-purple-900/30 rounded-lg">
-                <Database className="h-5 w-5 text-purple-400" />
+              <div className="p-2 bg-orange-900/30 rounded-lg">
+                <Zap className="h-5 w-5 text-orange-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white">Business Intelligence</h3>
+              <h3 className="text-xl font-semibold text-white">Data Quality</h3>
             </div>
             <ul className="space-y-2 text-gray-200">
               <li className="flex items-center">
-                <div className="w-2 h-2 rounded-full bg-purple-500 mr-2"></div>
-                Data Warehousing
+                <div className="w-2 h-2 rounded-full bg-orange-500 mr-2"></div>
+                Label Studio
               </li>
               <li className="flex items-center">
-                <div className="w-2 h-2 rounded-full bg-purple-500 mr-2"></div>
-                ETL Processes
+                <div className="w-2 h-2 rounded-full bg-orange-500 mr-2"></div>
+                Prodigy & Snorkel
               </li>
               <li className="flex items-center">
-                <div className="w-2 h-2 rounded-full bg-purple-500 mr-2"></div>
-                Business Reporting
+                <div className="w-2 h-2 rounded-full bg-orange-500 mr-2"></div>
+                QA Auditing
               </li>
               <li className="flex items-center">
-                <div className="w-2 h-2 rounded-full bg-purple-500 mr-2"></div>
-                KPI Development
-              </li>
-              <li className="flex items-center">
-                <div className="w-2 h-2 rounded-full bg-purple-500 mr-2"></div>
-                Data-Driven Decision Making
-              </li>
-              <li className="flex items-center">
-                <div className="w-2 h-2 rounded-full bg-purple-500 mr-2"></div>
-                Big Data (Hadoop, Spark)
+                <div className="w-2 h-2 rounded-full bg-orange-500 mr-2"></div>
+                Flask & CI/CD
               </li>
             </ul>
           </div>
@@ -638,7 +710,7 @@ export default function Home() {
                 <div className="flex justify-between items-start">
                   <div>
                     <h4 className="text-xl font-semibold text-white">Northeastern University</h4>
-                    <p className="text-gray-300">Master of Professional Studies Analytics, Statistical Analytics</p>
+                    <p className="text-gray-300">Master's Degree, Analytics, Statistical Modelling</p>
                   </div>
                   <div className="text-right">
                     <p className="text-gray-300">Boston, MA</p>
@@ -655,7 +727,7 @@ export default function Home() {
               <div className="bg-black/90 p-6 rounded-xl shadow-sm">
                 <div className="flex justify-between items-start">
                   <div>
-                    <h4 className="text-xl font-semibold text-white">St. Joseph's Degree & PG College</h4>
+                    <h4 className="text-xl font-semibold text-white">Osmania University, St. Joseph's Degree & PG College</h4>
                     <p className="text-gray-300">Bachelor of Commerce, Information Technology</p>
                   </div>
                   <div className="text-right">
@@ -665,7 +737,7 @@ export default function Home() {
                 </div>
                 <p className="mt-2 text-gray-300">
                   <span className="font-medium">Coursework:</span> Python, Data Modelling, Database Management,
-                  Statistics, Accounting, Business Tax Law
+                  Statistics, Accounting, Audit administration, Business Tax Law, Economics
                 </p>
               </div>
             </div>
@@ -674,6 +746,13 @@ export default function Home() {
           <div className="mb-12">
             <h3 className="text-2xl font-bold text-white mb-4">Certifications</h3>
             <div className="space-y-4">
+              <div className="bg-black/90 p-6 rounded-xl shadow-sm border border-[color:var(--theme-secondary)]/20">
+                <h4 className="text-xl font-semibold text-white">Agentic AI Bootcamp</h4>
+                <p className="text-gray-300">
+                  Agentic AI, building autonomous single- and multi-agent systems using LangGraph and LangChain for real-world applications.
+                </p>
+              </div>
+
               <div className="bg-black/90 p-6 rounded-xl shadow-sm">
                 <h4 className="text-xl font-semibold text-white">Data Science Professional Certificate (2024)</h4>
                 <p className="text-gray-300">
