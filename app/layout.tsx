@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Catherine Smereena Dommaty | Portfolio",
   description:
     "Data Science and Analytics professional with expertise in search relevance, ranking models, and NLP-based query understanding.",
-    generator: 'v0.dev'
+    generator: 'v0.app'
 }
 
 export default function RootLayout({
